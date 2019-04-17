@@ -24,18 +24,17 @@ def send_text_to_me(text):
 
 
 # списки
-list1 = range(25, 100, 20)
+list1 = range(25, 35)
 
 # print(list1)
 
 for number in list1:
     type_of_number = ''
-    if type(number) is int:
-        number = number * 1000
-        type_of_number = 'ЧИСЛО'
+    if number % 3 == 0:
+        type_of_number = 'Делится на три без остатка'
     else:
-        type_of_number = 'СТРОКА'
+        type_of_number = 'Не делится на три без остатка. Остаток: {}'.format(number % 3)
 
-    send_text_to_me('Привет «{}» - {}'.format(number, type_of_number))
+    send_text_to_me('Наше числов «{}» - {}'.format(number, type_of_number))
 
 # print(list1)
