@@ -5,11 +5,12 @@ Here is the module for testing functions and telegram integration
 
 import telegram
 bot = telegram.Bot(token='656974486:AAFhijLPV10bnge-n8buRhRxKsfpaDYP43I')  # it's a private! Don't steal it!
+CHAT_ID_WITH_RUSLAN = 82493329
 
 
 def send_text_to_me():
     # sending message to me
-    chat_id = 82493329
+    chat_id = CHAT_WITH_RUSLAN
 
     last_message = bot.get_updates()[-1].message.text
 
