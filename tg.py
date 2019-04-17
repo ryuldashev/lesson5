@@ -24,17 +24,21 @@ def send_text_to_me(text):
 
 
 # списки
-list1 = range(25, 35)
+list1 = (1, 2, 3, 4, )
 
-# print(list1)
+
+# словари
+dict1 = {
+    2: 20000,
+    4: 40000
+}
 
 for number in list1:
-    type_of_number = ''
-    if number % 3 == 0:
-        type_of_number = 'Делится на три без остатка'
-    else:
-        type_of_number = 'Не делится на три без остатка. Остаток: {}'.format(number % 3)
-
-    send_text_to_me('Наше числов «{}» - {}'.format(number, type_of_number))
+    status = 'нет значения'
+    if number in dict1:
+        status = dict1[number]
+    send_text_to_me('Наше число «{}» - {}'.format(number, status))
 
 # print(list1)
+
+
